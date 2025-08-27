@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul | PhD Scholar at IIT Hyderabad</title>
+    <title>Rahul Pal - PhD Scholar at IIT Hyderabad</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -20,32 +20,56 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding: 20px;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
         }
         
         header {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin: 20px 0;
+            background: #1a2a6c;
+            color: white;
             padding: 30px;
             text-align: center;
         }
         
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .profile-picture {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .profile-picture img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             border: 5px solid #1a2a6c;
-            margin: 0 auto 20px;
-            display: block;
-            background: linear-gradient(45deg, #fdbb2d, #b21f1f);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-picture img:hover {
+            transform: scale(1.02);
+        }
+        
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
         }
         
         h1 {
@@ -61,19 +85,19 @@
         }
         
         .content {
+            padding: 30px;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 30px;
         }
         
         .card {
             flex: 1;
             min-width: 300px;
-            background: rgba(255, 255, 255, 0.95);
+            background: #f9f9f9;
             border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
         
@@ -101,6 +125,36 @@
         
         .about p {
             margin-bottom: 15px;
+        }
+        
+        .instructions {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #1a2a6c;
+        }
+        
+        .instructions h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
         }
         
         .skills {
@@ -158,10 +212,8 @@
         footer {
             text-align: center;
             padding: 20px;
-            margin-top: auto;
+            background: #1a2a6c;
             color: white;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
         }
         
         .social-links {
@@ -186,6 +238,11 @@
                 flex-direction: column;
             }
             
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
             h1 {
                 font-size: 2rem;
             }
@@ -199,19 +256,52 @@
 <body>
     <div class="container">
         <header>
-            <div class="profile-img"></div>
-            <h1>Rahul Sharma</h1>
+            <h1>Rahul Pal</h1>
             <p class="title">PhD Scholar at Indian Institute of Technology Hyderabad</p>
         </header>
         
+        <div class="profile-header">
+            <div class="profile-picture">
+                <!-- Replace the src attribute with the path to your actual image -->
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                     alt="Rahul Pal - PhD Scholar at IIT Hyderabad" id="profile-pic">
+            </div>
+            <div class="profile-info">
+                <h2>About Me</h2>
+                <p>Hello! I'm Rahul Pal, a dedicated PhD Scholar at IIT Hyderabad, specializing in Computer Science and Engineering. My research focuses on machine learning applications in healthcare technology.</p>
+                <p>I completed my Master's degree in Computer Science from IIT Delhi in 2019 and my Bachelor's degree from NIT Warangal in 2016.</p>
+                <p>My PhD research involves developing innovative AI solutions for early disease detection using medical imaging data.</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to Add Your Actual Picture</h3>
+            <ol>
+                <li>Upload your image to a service like Imgur, Google Drive, or GitHub repository</li>
+                <li>Get a direct link to the image</li>
+                <li>Replace the current <code>src</code> attribute value of the image with your image URL</li>
+                <li>Make sure to keep the <code>id="profile-pic"</code> attribute</li>
+                <li>If you're using GitHub, you can upload the image to your repository and use a relative path like <code>src="images/profile.jpg"</code></li>
+            </ol>
+        </div>
+        
         <div class="content">
             <div class="card">
-                <h2><i class="fas fa-user-graduate"></i> About Me & Education</h2>
-                <div class="about">
-                    <p>Hello! I'm Rahul, a dedicated PhD Scholar at IIT Hyderabad, specializing in Computer Science and Engineering. My research focuses on machine learning applications in healthcare technology.</p>
-                    <p>I completed my Master's degree in Computer Science from IIT Delhi in 2019 and my Bachelor's degree from NIT Warangal in 2016.</p>
-                    <p>My PhD research involves developing innovative AI solutions for early disease detection using medical imaging data.</p>
-                </div>
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <ul class="project-list">
+                    <li>
+                        <h3>PhD in Computer Science</h3>
+                        <p>IIT Hyderabad (2021 - Present)</p>
+                    </li>
+                    <li>
+                        <h3>M.Tech in Computer Science</h3>
+                        <p>IIT Delhi (2016 - 2019)</p>
+                    </li>
+                    <li>
+                        <h3>B.Tech in Computer Science</h3>
+                        <p>NIT Warangal (2012 - 2016)</p>
+                    </li>
+                </ul>
                 
                 <h2><i class="fas fa-star"></i> Skills</h2>
                 <div class="skills">
@@ -242,15 +332,6 @@
                         <p>Published 3 papers in international journals on AI applications in healthcare. Presented findings at 2 international conferences.</p>
                     </li>
                 </ul>
-                
-                <h2><i class="fas fa-graduation-cap"></i> PhD Coursework</h2>
-                <ul class="project-list">
-                    <li>Advanced Machine Learning</li>
-                    <li>Research Methodology</li>
-                    <li>Deep Learning in Healthcare</li>
-                    <li>Computer Vision</li>
-                    <li>Statistical Methods in Research</li>
-                </ul>
             </div>
             
             <div class="card">
@@ -258,7 +339,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>rahul@iith.ac.in</span>
+                        <span>rahul.pal@iith.ac.in</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -274,37 +355,53 @@
                     </div>
                 </div>
                 
-                <h2><i class="fas fa-clock"></i> Academic Timeline</h2>
+                <h2><i class="fas fa-file-alt"></i> PhD Coursework</h2>
                 <ul class="project-list">
-                    <li>
-                        <h3>2021 - Present</h3>
-                        <p>PhD in Computer Science, IIT Hyderabad</p>
-                    </li>
-                    <li>
-                        <h3>2019 - 2021</h3>
-                        <p>Research Fellow, IIT Delhi</p>
-                    </li>
-                    <li>
-                        <h3>2016 - 2019</h3>
-                        <p>M.Tech in Computer Science, IIT Delhi</p>
-                    </li>
-                    <li>
-                        <h3>2012 - 2016</h3>
-                        <p>B.Tech in Computer Science, NIT Warangal</p>
-                    </li>
+                    <li>Advanced Machine Learning</li>
+                    <li>Research Methodology</li>
+                    <li>Deep Learning in Healthcare</li>
+                    <li>Computer Vision</li>
+                    <li>Statistical Methods in Research</li>
                 </ul>
             </div>
         </div>
         
         <footer>
-            <p>© 2023 Rahul Sharma | PhD Scholar at IIT Hyderabad</p>
+            <p>© 2023 Rahul Pal | PhD Scholar at IIT Hyderabad</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/misterrahulji" target="_blank"><i class="fab fa-x-twitter"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-researchgate"></i></a>
             </div>
         </footer>
     </div>
+
+    <script>
+        // Simple JavaScript to demonstrate interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const profilePic = document.getElementById('profile-pic');
+            
+            profilePic.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.03)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            profilePic.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            // Add click effect to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+                    setTimeout(() => {
+                        this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.08)';
+                    }, 300);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
